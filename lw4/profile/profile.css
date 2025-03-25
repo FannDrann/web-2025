@@ -4,43 +4,25 @@
 }
 
 .navigation {
-  display: flex;
-  flex-direction: column;
   width: 40px;
   padding: 20px 5px 20px 5px;
-}
-
-.navigation img {
   cursor: pointer;
-  margin-bottom: 5px;
 }
 
-body{
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  font-family: 'Golos UI';        
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
 
 .profile {
-  max-width: 70%;
-  width: 70%;
-  margin-top: 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
+  margin-left: 60px;
+  max-width: 900px;
+  padding: 20px;
 }
 
 .logo {
-  width: 70px;
-  height: 70px;
+  width: 123px;
+  height: 123px;
+  top: 97px;
+  left: 658.5px;
+  border-radius: 16px;
 }
 
 .text {
@@ -49,7 +31,7 @@ body{
   font-family: 'Golos UI';
 }
 
-#name{
+.name{
   font-size: 28px;
   font-style: 'Golos UI';
   font-weight: bold;
@@ -59,7 +41,7 @@ body{
   left: 539.5px;
 }
 
-#description {
+.description {
   width: 361px;
   height: 36px;
   top: 282px;
@@ -67,15 +49,13 @@ body{
 }
 
 .counter {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.counter img {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
+  width: 101px;
+  height: 30px;
+  top: 330px;
+  left: 669.5px;
+  gap: 6px;
+  border-radius: 6px;
+  
 }
 
 .userposts { 
