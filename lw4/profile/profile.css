@@ -14,53 +14,58 @@
   position: relative;
   margin-left: 60px;
   max-width: 900px;
-  padding: 20px;
+  height: 2500px; /* Фиксированная высота для абсолютного позиционирования */
 }
 
 .logo {
   width: 123px;
   height: 123px;
-  top: 97px;
-  left: 658.5px;
+  position: absolute;
   border-radius: 16px;
+  left: 410px;
+  bottom: 2120px;
 }
 
 .text {
   text-align: center;
   font-size: 14px;
   font-family: 'Golos UI';
+  position: absolute;
+  left: 35px;
+  bottom: -7px;
 }
 
-.name{
-  font-size: 28px;
-  font-style: 'Golos UI';
+.name {
+  position: absolute;
+  font-style: "Golos UI";
+  font-size: 32px;
   font-weight: bold;
-  width: 361px;
-  height: 32px;
-  top: 240px;
-  left: 539.5px;
+  left: 375px;
+  bottom: 2030px;
 }
 
 .description {
+  position: absolute;
   width: 361px;
   height: 36px;
-  top: 282px;
-  left: 539.5px;
+  bottom: 2000px;
+  left: 300px;
 }
 
 .counter {
+  position: absolute;
   width: 101px;
   height: 30px;
-  top: 330px;
-  left: 669.5px;
-  gap: 6px;
+  bottom: 1969px;
+  left: 435px;
   border-radius: 6px;
-  
+  padding: 6px 10px;
+  background-color: #F2F3F5;
+  box-sizing: border-box;
 }
 
 .userposts { 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  overflow: scroll;
 }
