@@ -14,7 +14,7 @@
   position: relative;
   margin-left: 60px;
   max-width: 900px;
-  height: 2500px; /* Фиксированная высота для абсолютного позиционирования */
+  padding: 20px;
 }
 
 .logo {
@@ -64,7 +64,8 @@
   box-sizing: border-box;
 }
 
-.userposts { 
+.userposts {
+  padding-top: 150px; 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
