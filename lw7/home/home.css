@@ -1,0 +1,152 @@
+@font-face {
+  font-family: 'Golos UI';
+  src: url('src/Golos-UI_Regular.ttf');
+}
+
+.navigation {
+  width: 40px;
+  padding: 20px 5px 20px 5px;
+  cursor: pointer;
+}
+
+.post {
+  width: 474px;
+  height: 700px;
+  top: 73px;
+  left: 482px;
+  position: relative;
+}
+
+.userdata {
+  width: 474px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+}
+
+.text {
+  font-family: 'Golos UI';
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.edit {
+  margin-left: auto;
+  top: 4px;
+}
+
+.post_photo {
+  width: 474px;
+  height: 474px;
+  display: block;
+}
+
+.count {
+  position: absolute;
+  background-color: #22222280;
+  color: white;
+  width: 44px;
+  height: 24px;
+  top: 55px;
+  left: 414px;
+  border-radius: 20px;
+  font-family: 'Golos UI';
+  font-weight: 400;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.left {
+  width: 20px;
+  height: 20px;
+  top: 250px;
+  left: 16px;
+  border-radius: 999px;
+  position: absolute;
+}
+
+.right {
+  width: 20px;
+  height: 20px;
+  top: 250px;
+  left: 438px;
+  border-radius: 999px;
+  position: absolute;
+}
+
+.likes {
+  width: 68px;
+  height: 30px;
+  bottom: 116px;
+  border-radius: 8px;
+  position: absolute;
+  background-color: #2222220D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  top: 524px;
+}
+
+.heart {
+  width: 16px;
+  height: 18px;
+}
+
+.like_text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.content {
+  width: 474px;
+  font-family: 'Golos UI';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+  color: #222222;
+  top: 550px;
+  position: absolute;
+}
+
+.more {
+  font-family: 'Golos UI';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+  color: #808080;
+  position: absolute;
+  top: 618px;
+}
+
+.time {
+  width: 79px;
+  font-family: 'Golos UI';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+  color: #22222280;
+  position: absolute;
+  top: 626px
+}
+
+.posts {
+  position: absolute;
+  top: 16px;
+  left: 200px;
+}

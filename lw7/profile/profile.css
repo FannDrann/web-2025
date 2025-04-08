@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Golos UI';
+  src: url('src/Golos-UI_Regular.ttf');
+}
+
+.navigation {
+  width: 40px;
+  padding: 20px 5px 20px 5px;
+  cursor: pointer;
+}
+
+
+.profile {
+  position: relative;
+  margin-left: 20%;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.logo {
+  width: 123px;
+  height: 123px;
+  position: absolute;
+  border-radius: 16px;
+  left: 410px;
+  margin-top: -12%;
+}
+
+.text {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Golos UI';
+  position: absolute;
+}
+
+.name {
+  position: absolute;
+  font-style: "Golos UI";
+  font-size: 32px;
+  font-weight: bold;
+  margin-left: 37%;
+  margin-top: 2%;
+}
+
+.description {
+  position: absolute;
+  width: 361px;
+  height: 36px;
+  margin-top: 6.5%;
+  margin-left: 31%;
+}
+
+.post {
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  border-radius: 6px;
+  background-color: #DCDCDC;
+  margin-top: 11%;
+  margin-left: 45%;
+}
+
+.post-img {
+  margin: 6px 0 0 5px;
+  position: absolute;
+}
+
+.post-text {
+  font-weight: 400;
+  position: absolute;
+  margin: 6px 0px 0 30px;
+  font-size: 15px;
+  color: #222222;
+}
+
+.userposts {
+  padding-top: 150px; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
