@@ -12,18 +12,18 @@
 .post {
   width: 474px;
   height: 700px;
-  top: 73px;
-  left: 482px;
+  margin-top: 13%;
+  margin-left: 100%;
   position: relative;
 }
 
 .userdata {
   width: 474px;
   height: 32px;
-  display: flex;
+  position: absolute;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-top: -10%;
 }
 
 .logo {
@@ -40,8 +40,9 @@
 }
 
 .edit {
-  margin-left: auto;
-  top: 4px;
+  margin-left: 93%;
+  margin-top: -6.5%;
+  position: absolute;
 }
 
 .post_photo {
@@ -54,17 +55,15 @@
   position: absolute;
   background-color: #22222280;
   color: white;
-  width: 44px;
-  height: 24px;
-  top: 55px;
-  left: 414px;
+  width: 34px;
+  height: 22px;
+  margin-top: -94%;
+  margin-left: 87%;
   border-radius: 20px;
   font-family: 'Golos UI';
   font-weight: 400;
   font-size: 15px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
+  padding-left: 2%;
 }
 
 .left {
@@ -88,26 +87,26 @@
 .likes {
   width: 68px;
   height: 30px;
-  bottom: 116px;
   border-radius: 8px;
-  position: absolute;
   background-color: #2222220D;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  top: 524px;
+  margin-top: 2%;
+  position: absolute;
 }
 
 .heart {
   width: 16px;
   height: 18px;
+  margin-left: 10%;
+  margin-top: 10%;
+  position: absolute;
 }
 
 .like_text {
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
+  margin-left: 47%;
+  margin-top: 12%;
 }
 
 .content {
@@ -118,7 +117,7 @@
   line-height: 18px;
   letter-spacing: -0.15px;
   color: #222222;
-  top: 550px;
+  margin-top: 12%;
   position: absolute;
 }
 
@@ -130,7 +129,7 @@
   letter-spacing: -0.15px;
   color: #808080;
   position: absolute;
-  top: 618px;
+  margin-top: 25%;
 }
 
 .time {
@@ -142,11 +141,19 @@
   letter-spacing: -0.15px;
   color: #22222280;
   position: absolute;
-  top: 626px
+  margin-top: 31%;
 }
 
 .posts {
   position: absolute;
-  top: 16px;
-  left: 200px;
+  margin-top: -13%;
+  margin-left: 0%;
+}
+
+.text-name {
+  font-family: 'Golos UI';
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 8.7%;
+  margin-top: -6.4%;
 }
