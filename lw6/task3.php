@@ -43,12 +43,12 @@ function Zodiac(int $day, int $month)
     <div>
         <p>Задание #3. Знак зодиака</p>
         <form method="post">
-            <input type="text" name="input3" placeholder="дата">
-            <button type="submit" name="submit3">Ввести</button>
+            <input type="text" name="input" placeholder="дата">
+            <button type="submit" name="submit">Ввести</button>
         </form>
         <?php
-        if (isset($_POST['submit3'])) {
-            $date = explode(".", $_POST['input3']);
+        if (isset($_POST['submit'])) {
+            $date = explode(".", $_POST['input']);
             $result = Zodiac($date[0], $date[1]);
             echo "<p>$result</p>";
         }

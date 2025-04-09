@@ -44,12 +44,12 @@ function PostfixNotation(string $input)
     <div>
         <p>Задание #7. Обратная польская запись </p>
         <form method="post">
-            <input type="text" name="input7" placeholder="цифра">
-            <button type="submit" name="submit7">Ввести</button>
+            <input type="text" name="input" placeholder="цифра">
+            <button type="submit" name="submit">Ввести</button>
         </form>
         <?php
-        if (isset($_POST['submit7'])) {
-            $result = PostfixNotation($_POST['input7']);
+        if (isset($_POST['submit'])) {
+            $result = PostfixNotation($_POST['input']);
             echo "<p>$result</p>";
         }
         ?>
