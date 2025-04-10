@@ -19,13 +19,16 @@ function PostfixNotation(string $input)
             array_push($nums, (int)$a[$i]);
         }
         else
-        {
-            $num1 = $nums[count($nums)-2];
-            $num2 = $nums[count($nums)-1];
-            array_splice($nums, count($nums)-2, 2);
-            $result = operation($num1, $num2, $a[$i]);
-            array_push($nums, $result);
-        }
+            if (((string)$a[$i] === '*') || ((string)$a[$i] === '+') || ((string)$a[$i] === '-')) 
+            {
+                $num1 = $nums[count($nums)-2];
+                $num2 = $nums[count($nums)-1];
+                array_splice($nums, count($nums)-2, 2);
+                $result = operation($num1, $num2, $a[$i]);
+                array_push($nums, $result);
+            }
+            else 
+                return "Некорректный ввод";
     }
     return $nums[0];
 }
