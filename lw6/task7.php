@@ -19,13 +19,16 @@ function PostfixNotation(string $input)
             array_push($nums, (int)$a[$i]);
         }
         else
-        {
-            $num1 = $nums[count($nums)-2];
-            $num2 = $nums[count($nums)-1];
-            array_splice($nums, count($nums)-2, 2);
-            $result = operation($num1, $num2, $a[$i]);
-            array_push($nums, $result);
-        }
+            if (((string)$a[$i] === '*') || ((string)$a[$i] === '+') || ((string)$a[$i] === '-')) 
+            {
+                $num1 = $nums[count($nums)-2];
+                $num2 = $nums[count($nums)-1];
+                array_splice($nums, count($nums)-2, 2);
+                $result = operation($num1, $num2, $a[$i]);
+                array_push($nums, $result);
+            }
+            else 
+                return "Некорректный ввод";
     }
     return $nums[0];
 }
@@ -44,12 +47,12 @@ function PostfixNotation(string $input)
     <div>
         <p>Задание #7. Обратная польская запись </p>
         <form method="post">
-            <input type="text" name="input7" placeholder="цифра">
-            <button type="submit" name="submit7">Ввести</button>
+            <input type="text" name="input" placeholder="цифра">
+            <button type="submit" name="submit">Ввести</button>
         </form>
         <?php
-        if (isset($_POST['submit7'])) {
-            $result = PostfixNotation($_POST['input7']);
+        if (isset($_POST['submit'])) {
+            $result = PostfixNotation($_POST['input']);
             echo "<p>$result</p>";
         }
         ?>

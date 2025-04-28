@@ -20,12 +20,12 @@ function isLeapYear(int $year)
     <div>
         <p>Задание #1. Високосный год</p>
         <form method="post">
-            <input type="text" name="input1" placeholder="год">
-            <button type="submit" name="submit1">Ввести</button>
+            <input type="text" name="input" placeholder="год">
+            <button type="submit" name="submit">Ввести</button>
         </form>
         <?php
-        if (isset($_POST['submit1'])) {
-            $result = isLeapYear((int) $_POST['input1']);
+        if (isset($_POST['submit'])) {
+            $result = isLeapYear((int) $_POST['input']);
             echo "<p>$result</p>";
         }
         ?>

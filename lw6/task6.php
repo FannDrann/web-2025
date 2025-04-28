@@ -27,12 +27,12 @@ function operation(int $num1, int $num2, string $sign)
     <div>
         <p>Задание #6. Вычислить факториал числа</p>
         <form method="post">
-            <input type="text" name="input6" placeholder="цифра">
-            <button type="submit" name="submit6">Ввести</button>
+            <input type="text" name="input" placeholder="цифра">
+            <button type="submit" name="submit">Ввести</button>
         </form>
         <?php
-        if (isset($_POST['submit6'])) {
-            $result = Factorial($_POST['input6']);
+        if (isset($_POST['submit'])) {
+            $result = Factorial($_POST['input']);
             echo "<p>$result</p>";
         }
         ?>

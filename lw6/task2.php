@@ -43,12 +43,12 @@ function Traslator(int $num)
     <div>
         <p>Задание #2. Переводчик</p>
         <form method="post">
-            <input type="text" name="input2" placeholder="цифра">
-            <button type="submit" name="submit2">Ввести</button>
+            <input type="text" name="input" placeholder="цифра">
+            <button type="submit" name="submit">Ввести</button>
         </form>
         <?php
-        if (isset($_POST['submit2'])) {
-            $result = Traslator((int) $_POST['input2']);
+        if (isset($_POST['submit'])) {
+            $result = Traslator((int) $_POST['input']);
             echo "<p>$result</p>";
         }
         ?>

@@ -33,13 +33,13 @@ function RangeLuckyTickets(int $num1, int $num2)
     <div>
         <p>Задание #5. Счастливые билеты</p>
         <form method="post">
-            <input type="text" name="input4" placeholder="цифра">
-            <input type="text" name="input5" placeholder="цифра">
-            <button type="submit" name="submit4">Ввести</button>
+            <input type="text" name="input1" placeholder="цифра">
+            <input type="text" name="input2" placeholder="цифра">
+            <button type="submit" name="submit">Ввести</button>
         </form>
         <?php
-        if (isset($_POST['submit4'])) {
-            $result = RangeLuckyTickets($_POST['input4'], $_POST['input5']);
+        if (isset($_POST['submit'])) {
+            $result = RangeLuckyTickets($_POST['input1'], $_POST['input2']);
             foreach ($result as $i)
             {
                 echo "<p>$i \n</p>";
