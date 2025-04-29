@@ -9,7 +9,7 @@
   padding: 20px 5px 20px 5px;
   cursor: pointer;
   border-right: 1px solid rgba(34, 34, 34, 0.05);
-  height: 150%;
+  height: 190%;
 }
 
 .post {
@@ -150,7 +150,7 @@
 .posts {
   position: absolute;
   margin-top: 1%;
-  margin-left: 8%;
+  margin-left: 3%;
 }
 
 .text-name {
