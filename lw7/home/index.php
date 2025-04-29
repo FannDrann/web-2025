@@ -57,7 +57,6 @@
 function formatTime($timestamp) {
     $currentTime = time();
     $diff = $currentTime - $timestamp;
-    
     if ($diff < 60) {
         return $diff . ' сек. назад';
     } elseif ($diff < 3600) {
