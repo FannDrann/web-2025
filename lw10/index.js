@@ -84,4 +84,4 @@ function CombiningMapFilter(array, i1, i2)
 {
     let result = array.map(num => num * i1).filter((num => num > i2));
     return result;
-}
+}   
