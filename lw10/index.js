@@ -8,6 +8,11 @@ function isPrimeNumber(arr)
             result.push(`${num} простое число`);
             continue;
         }
+        if (num <= 0)
+        {
+            result.push(`${num} не простое число`);
+            continue;
+        }
         let isPrime = true;
         for (let i = 2; i <= num-1; i++)
         {
@@ -17,7 +22,6 @@ function isPrimeNumber(arr)
                 break
             }
         }
-        if (num <= 0) isPrime = false;
         if (isPrime) result.push(`${num} простое число`);
         else result.push(`${num} не простое число`);
     }
@@ -25,7 +29,7 @@ function isPrimeNumber(arr)
 }    
 
 function countVowels(str) {
-    vowels = ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я']
+    vowels = ['А', 'Е', 'Ё', 'И', 'О', 'У', 'Ы', 'Э', 'Ю', 'Я', 'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я']
     count = 0
     for (let i of str)
     {
@@ -88,12 +92,17 @@ function genPassword(num)
     let upperchar = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'];
     let lowerchar = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'];
     let digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    for (let i = 0; i < num; i++)
+    result += (specialchar[Math.floor(Math.random() * 10)]);
+    result += (upperchar[Math.floor(Math.random() * 10)]);    
+    result += (lowerchar[Math.floor(Math.random() * 10)]);    
+    result += (digits[Math.floor(Math.random() * 10)]);  
+    for (let i = 0; i < num-4; i++)
     {
-        result += (specialchar[Math.floor(Math.random() * 10)]);
-        result += (upperchar[Math.floor(Math.random() * 10)]);    
-        result += (lowerchar[Math.floor(Math.random() * 10)]);    
-        result += (digits[Math.floor(Math.random() * 10)]);        
+        result += (specialchar[Math.floor(Math.random() * 10)]) || 
+        (upperchar[Math.floor(Math.random() * 10)]) ||
+        (upperchar[Math.floor(Math.random() * 10)]) ||
+        (lowerchar[Math.floor(Math.random() * 10)]) ||   
+        (digits[Math.floor(Math.random() * 10)]);        
     }
     return result;
 }
