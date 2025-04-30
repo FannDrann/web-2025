@@ -1,19 +1,28 @@
-function isPrimeNumber(num) 
+function isPrimeNumber(arr) 
 {
-    if (num > 0)
+    let result = [];
+    for (let num of arr)
     {
-        for (let i = 2; i < num-1; i++) 
+        if ((num > 0) && (num < 4)) 
+        {
+            result.push(`${num} простое число`);
+            continue;
+        }
+        let isPrime = true;
+        for (let i = 2; i <= num-1; i++)
+        {
+            if (num % i === 0)
             {
-                if (num % i === 0) 
-                {
-                    return "не простое число"
-                }
-                
+                isPrime = false;
+                break
             }
-            return "простое число"
+        }
+        if (num <= 0) isPrime = false;
+        if (isPrime) result.push(`${num} простое число`);
+        else result.push(`${num} не простое число`);
     }
-    return "не простое число"
-}
+    return result;
+}    
 
 function countVowels(str) {
     vowels = ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я']
@@ -59,6 +68,16 @@ function mergeObjects(obj1, obj2)
 function nameArray(array) 
 {
     let result = array.map(i => i.name);
+    return result;
+}
+
+function mapObject(obj, callback) 
+{
+    let result = {};
+    for (let key in obj)
+    {
+        result[key] = callback(obj[key]);
+    }
     return result;
 }
 
