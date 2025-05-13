@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'Golos UI';
+  src: url('src/Golos-UI_Regular.ttf');
+}
+
+.navigation {
+  position: absolute;
+  width: 45px;
+  padding: 20px 5px 20px 5px;
+  cursor: pointer;
+  border-right: 1px solid rgba(34, 34, 34, 0.05);
+  height: 190%;
+}
+
+.post {
+  width: 474px;
+  height: 700px;
+  margin-top: 13%;
+  margin-left: 100%;
+  position: relative;
+}
+
+.userdata {
+  width: 474px;
+  height: 32px;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -10%;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+}
+
+.text {
+  font-family: 'Golos UI';
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.edit {
+  margin-left: 93%;
+  margin-top: -6.5%;
+  position: absolute;
+}
+
+.post_photo {
+  width: 474px;
+  height: 474px;
+  display: block;
+}
+
+.count {
+  position: absolute;
+  background-color: #22222280;
+  color: white;
+  width: 34px;
+  height: 22px;
+  margin-top: -94%;
+  margin-left: 87%;
+  border-radius: 20px;
+  font-family: 'Golos UI';
+  font-weight: 400;
+  font-size: 15px;
+  padding-left: 2%;
+}
+
+.left {
+  width: 20px;
+  height: 20px;
+  top: 250px;
+  left: 16px;
+  border-radius: 999px;
+  position: absolute;
+}
+
+.right {
+  width: 20px;
+  height: 20px;
+  top: 250px;
+  left: 438px;
+  border-radius: 999px;
+  position: absolute;
+}
+
+.likes {
+  width: 68px;
+  height: 30px;
+  border-radius: 8px;
+  background-color: #2222220D;
+  margin-top: 2%;
+  position: absolute;
+}
+
+.heart {
+  width: 16px;
+  height: 18px;
+  margin-left: 10%;
+  margin-top: 10%;
+  position: absolute;
+}
+
+.like_text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  margin-left: 47%;
+  margin-top: 12%;
+}
+
+.content {
+  width: 474px;
+  font-family: 'Golos UI';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+  color: #222222;
+  margin-top: 12%;
+  position: absolute;
+}
+
+.more {
+  font-family: 'Golos UI';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+  color: #808080;
+  position: absolute;
+  margin-top: 25%;
+}
+
+.time {
+  width: 79px;
+  font-family: 'Golos UI';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+  color: #22222280;
+  position: absolute;
+  margin-top: 31%;
+}
+
+.posts {
+  position: absolute;
+  margin-top: 1%;
+  margin-left: 3%;
+}
+
+.text-name {
+  font-family: 'Golos UI';
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 8.7%;
+  margin-top: -6.4%;
+}
