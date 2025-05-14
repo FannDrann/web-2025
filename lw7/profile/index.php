@@ -4,11 +4,11 @@
     $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT, [
         'filter' => FILTER_CALLBACK,
         'options' => function ($value) {
-            return (strlen($value) >= 1 && strlen($value) <= 100000) ? $value : false;
+            return (strlen($value) >= 1) ? $value : false;
         }
     ]);
-    if (($id === false) || !isset($usersJson[$id])) {
-        header("Location: http://localhost:3000/home/");
+    if (($id === false) || !isset($users[$id])) {
+        header("Location: http://localhost:3000/lw7/home/");
     }
     require_once '../validation.php';
     $user = $users[$id];
