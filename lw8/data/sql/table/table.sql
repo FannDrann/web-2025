@@ -4,27 +4,19 @@ SET GLOBAL time_zone = '+00:00';
 
 CREATE TABLE user (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
   username VARCHAR(50) NOT NULL,
   logo_path VARCHAR(255) NOT NULL,
   description VARCHAR(255) NOT NULL,
-  email VARCHAR(100) NOT NULL,
-  password VARCHAR(255) NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE post (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   user_id INT NOT NULL,
+  image_path VARCHAR(255) NOT NULL,
   content TEXT,
-  likes INT,
+  likes INT,  
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (user_id) REFERENCES user(id)
-);
-
-CREATE TABLE post_image (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  post_id INT NOT NULL,
-  image_path VARCHAR(255) NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (post_id) REFERENCES post(id)
 );

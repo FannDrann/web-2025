@@ -29,7 +29,7 @@ function isPrimeNumber(arr)
 }    
 
 function countVowels(str) {
-    vowels = ['А', 'Е', 'Ё', 'И', 'О', 'У', 'Ы', 'Э', 'Ю', 'Я', 'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я']
+    vowels = ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я']
     count = 0
     for (let i of str)
     {
@@ -69,11 +69,7 @@ function mergeObjects(obj1, obj2)
     return result;
 }
 
-function nameArray(array) 
-{
-    let result = array.map(i => i.name);
-    return result;
-}
+const nameArray = array => array.map(i => i.name);
 
 function mapObject(obj, callback) 
 {
@@ -99,7 +95,6 @@ function genPassword(num)
     for (let i = 0; i < num-4; i++)
     {
         result += (specialchar[Math.floor(Math.random() * 10)]) || 
-        (upperchar[Math.floor(Math.random() * 10)]) ||
         (upperchar[Math.floor(Math.random() * 10)]) ||
         (lowerchar[Math.floor(Math.random() * 10)]) ||   
         (digits[Math.floor(Math.random() * 10)]);        
