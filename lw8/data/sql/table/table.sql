@@ -4,7 +4,6 @@ SET GLOBAL time_zone = '+00:00';
 
 CREATE TABLE user (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  user_id INT NOT NULL,
   username VARCHAR(50) NOT NULL,
   logo_path VARCHAR(255) NOT NULL,
   description VARCHAR(255) NOT NULL,
