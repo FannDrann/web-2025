@@ -1,5 +1,19 @@
 function isPrimeNumber(arr) 
 {
+    if (Number.isInteger(arr))
+    {
+        if (arr > 3)
+        {
+            for (let i = 2; i <= arr-1; i++)
+            {
+                if (arr % i === 0)
+                {
+                    return "не простое число"
+                }
+            }    
+        }
+        return "простое число"
+    }
     let result = [];
     for (let num of arr)
     {
@@ -91,13 +105,12 @@ function genPassword(num)
     result += (specialchar[Math.floor(Math.random() * 10)]);
     result += (upperchar[Math.floor(Math.random() * 10)]);    
     result += (lowerchar[Math.floor(Math.random() * 10)]);    
-    result += (digits[Math.floor(Math.random() * 10)]);  
+    result += (digits[Math.floor(Math.random() * 10)]);
+    
+    let Chars = specialchar.concat(upperchar, lowerchar, digits);
     for (let i = 0; i < num-4; i++)
     {
-        result += (specialchar[Math.floor(Math.random() * 10)]) || 
-        (upperchar[Math.floor(Math.random() * 10)]) ||
-        (lowerchar[Math.floor(Math.random() * 10)]) ||   
-        (digits[Math.floor(Math.random() * 10)]);        
+        result += Chars[Math.floor(Math.random() * Chars.length)];
     }
     return result;
 }
