@@ -13,7 +13,7 @@ if (!$data) {
     echo json_encode(['error' => 'Invalid JSON']);
     exit;
 }
-if (!isset($data['content']) || strlen($data['content']) > 10000) {
+if (!isset($data['content'])){
     echo json_encode(['error' => 'Invalid content']);
     exit;
 }
