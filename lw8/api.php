@@ -24,6 +24,7 @@ if (!isset($data['images'])) {
 
 $content = $data['content'];
 $images = $data['images'];
+$likes = $data['likes'];
 
 foreach ($images as $img) {
     if (!is_string($img)) {
@@ -63,7 +64,7 @@ $userId = 1;
 $postData = [
     'user_id' => $userId,
     'content' => $content,
-    'likes' => 0,
+    'likes' => $likes,
     'image_path' => !empty($imagePaths) ? implode(',', $imagePaths) : ''
 ];
 
