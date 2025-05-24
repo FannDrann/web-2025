@@ -1,0 +1,172 @@
+@font-face {
+  font-family: 'Golos UI';
+  src: url('src/Golos-UI_Regular.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Golos UI';
+}
+
+.navigation {
+  position: absolute;
+  width: 45px;
+  padding: 20px 5px 20px 5px;
+  cursor: pointer;
+  border-right: 1px solid rgba(34, 34, 34, 0.05);
+  height: 190%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.posts {
+  position: absolute;
+  margin-top: 1%;
+  margin-left: 3%;
+}
+
+.post {
+  width: 474px;
+  height: 700px;
+  margin-top: 13%;
+  margin-left: 100%;
+  position: relative;
+  background-color: white;
+}
+
+.userdata {
+  width: 474px;
+  height: 32px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -10%;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+}
+
+.text-name {
+  font-weight: 500;
+  font-size: 14px;
+  margin: auto;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+.edit {
+  margin-left: 93%;
+  margin-top: -6.5%;
+  position: absolute;
+}
+
+.post_photo {
+  width: 474px;
+  height: 474px;
+  display: block;
+}
+
+.count {
+  position: absolute;
+  background-color: rgba(34, 34, 34, 0.5);
+  color: white;
+  width: 34px;
+  height: 22px;
+  margin-top: -94%;
+  margin-left: 87%;
+  border-radius: 20px;
+  font-family: 'Golos UI';
+  font-weight: 400;
+  font-size: 15px;
+  padding-left: 2%;
+  backdrop-filter: blur(12px);
+}
+
+.left, .right {
+  width: 20px;
+  height: 20px;
+  top: 250px;
+  border-radius: 999px;
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.left {
+  left: 16px;
+}
+
+.right {
+  left: 438px;
+}
+
+.likes {
+  width: 68px;
+  height: 30px;
+  border-radius: 8px;
+  background-color: rgba(34, 34, 34, 0.05);
+  margin-top: 2%;
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.heart {
+  width: 16px;
+  height: 18px;
+  margin-left: 10%;
+}
+
+.like_text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  margin: auto;
+}
+
+.content {
+  width: 474px;
+  font-family: 'Golos UI';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+  color: #222222;
+  margin-top: 12%;
+  position: absolute;
+  max-height: 40px;
+  overflow: hidden;
+}
+
+.more {
+  font-family: 'Golos UI';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+  color: rgba(128, 128, 128, 1);
+  position: absolute;
+  margin-top: 25%;
+  cursor: pointer;
+}
+
+.time {
+  width: 79px;
+  font-family: 'Golos UI';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+  color: rgba(34, 34, 34, 0.5);
+  position: absolute;
+  margin-top: 31%;
+}
