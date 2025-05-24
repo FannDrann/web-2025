@@ -39,5 +39,20 @@
         }
         ?>
     </div>
+    <div class="modal modal_disabled" id="modal">
+        <div class="modal-wrapper">
+            <button class="modal__close">X</button>
+            <div class="modal__carousel">
+                <div class="modal__images"></div>
+                <button type="button" class="modal__arrow modal__arrow-left">
+                    <img src="src/left.png" alt="Previous" class="modal__arrow-icon">
+                </button>
+                <button type="button" class="modal__arrow modal__arrow-right">
+                    <img src="src/right.png" alt="Next" class="modal__arrow-icon">
+                </button>
+            </div>
+            <div class="modal__counter"></div>
+        </div>
+    </div>
 </body>
 </html>
