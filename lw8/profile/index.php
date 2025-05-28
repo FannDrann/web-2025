@@ -4,14 +4,14 @@
     $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT, [
     'filter' => FILTER_CALLBACK,
     'options' => function ($value) {
-        return (strlen($value) >= 1 && strlen($value) <= 100000) ? $value : false;
+        return (strlen($value) >= 1) ? $value : false;
     }
 ]);
+    if (($id === false)){
+        header("Location: http://localhost:3000/lw8/home/");
+    }
     $user = findUserInDatabase($connection, $id);
     $posts = findAllUsersPosts($connection, $id);
-    if ($id === false) {
-        header("Location: http://localhost:3000/home/");
-    }
 ?>
 
 <!DOCTYPE html>
