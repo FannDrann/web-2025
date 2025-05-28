@@ -40,11 +40,21 @@ if (!is_dir($imageDir)) {
 
 $imagePaths = [];
 foreach ($images as $img) {
-    $fileName = uniqid('img_', true) . '.png';
-    $savePath = $imageDir . $fileName;
-    if (!$img) {
-        echo json_encode(['error' => 'Empty URL']);
-        exit;
+    if (substr($img, -4) === '.gif') {
+        $fileName = uniqid('img_', true) . '.gif';
+        $savePath = $imageDir . $fileName;
+        if (!$img) {
+            echo json_encode(['error' => 'Empty URL']);
+            exit;
+        }
+    }
+    else {
+        $fileName = uniqid('img_', true) . '.png';
+        $savePath = $imageDir . $fileName;
+        if (!$img) {
+            echo json_encode(['error' => 'Empty URL']);
+            exit;
+        }
     }
     $headers = @get_headers($img);
     if (!$headers || substr($headers[0], 9, 3) !== '200') {
