@@ -1,17 +1,17 @@
 <?php
-    require_once '../data/sql/scripts.php';
-    $connection = connectDatabase();
     $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT, [
     'filter' => FILTER_CALLBACK,
     'options' => function ($value) {
-        return (strlen($value) >= 1 && strlen($value) <= 100000) ? $value : false;
+        return (strlen($value) >= 1) ? $value : false;
     }
 ]);
+    if ($id === false) {
+        header("Location: http://localhost:3000/lw11/home/");
+    }
+    require_once '../data/sql/scripts.php';
+    $connection = connectDatabase();
     $user = findUserInDatabase($connection, $id);
     $posts = findAllUsersPosts($connection, $id);
-    if ($id === false) {
-        header("Location: http://localhost:3000/home/");
-    }
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +24,7 @@
 </head>
 <body> 
     <div class="navigation">
-        <a href="http://localhost:3000/lw9/home/">
+        <a href="http://localhost:3000/lw11/home/">
             <img src="src/Menu_Item_1.svg" alt="Home">
         </a>
         <a href="http://localhost:3000/lw9/profile/index.php?id=1">
@@ -42,7 +42,8 @@
         </div>
         <div class="userposts">
             <?php foreach ($posts as $post): ?>
-                <img src=<?= $post['image_path'] ?> alt="post" class="pic">
+                <?php $image = findPostImagesInDatabase($connection, $post['id']);?>
+                <img src="<?= htmlspecialchars($image[0]['image_path']) ?>" alt="post" class="pic">
             <?php endforeach; ?>
         </div>
     </div>

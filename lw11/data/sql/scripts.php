@@ -1,7 +1,7 @@
 <?php
 function connectDatabase(): PDO
 {
-    $dsn = 'mysql:host=localhost;dbname=blog';
+    $dsn = 'mysql:host=localhost;dbname=blog2';
     $user = 'root';
     $password = 'aboba';
 
@@ -26,6 +26,23 @@ function findUserInDatabase(PDO $connection, int $id): array
     return $row;
 }
 
+function findPostImagesInDatabase(PDO $connection, int $id): array
+{
+    $query = <<<SQL
+        SELECT *
+        FROM post_images 
+        WHERE post_id = $id
+        SQL;
+
+    $statement = $connection->query($query);
+    $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    if (!$rows) {
+        throw new RuntimeException("Post with id $id have not images");
+    }
+
+    return $rows;
+}
 
 function findAllPosts(PDO $connection): array
 {
@@ -66,8 +83,7 @@ function savePostToDatabase(PDO $connection, array $postParams): int
     $statement->execute([
         $postParams['user_id'],
         $postParams['content'],
-        $postParams['likes'],
-        $postParams['image_path'] ?? ''
+        $postParams['likes']
     ]);
 
     return (int)$connection->lastInsertId();
@@ -76,7 +92,7 @@ function savePostToDatabase(PDO $connection, array $postParams): int
 function savePostImageToDatabase(PDO $connection, array $postParams): int
 {
     $query = <<<SQL
-        INSERT INTO post_image (post_id, image_path)
+        INSERT INTO post_images (post_id, image_path)
         VALUES (?, ?)
         SQL;
     $statement = $connection->prepare($query);

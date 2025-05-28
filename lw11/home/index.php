@@ -15,16 +15,17 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<script src="slider.js" defer></script>
 <head>
     <link rel="stylesheet" href="home.css">
     <title>Home</title>
 </head>
 <body>
     <div class="navigation">
-        <a href="http://localhost:3000/lw9/home/">
+        <a href="http://localhost:3000/lw11/home/">
             <img src="src/Menu_Item_1.svg" alt="Home">
         </a>
-        <a href="http://localhost:3000/lw9/profile/index.php?id=1">
+        <a href="http://localhost:3000/lw11/profile/index.php?id=1">
             <img src="src/Menu_Item_2.svg" alt="Profile">
         </a>        
         <img src="src/Menu_Item_3.svg" alt="Plus">
@@ -38,21 +39,6 @@
             include 'post_template.php';
         }
         ?>
-    </div>
-    <div class="modal modal_disabled" id="modal">
-        <div class="modal-wrapper">
-            <button class="modal__close">X</button>
-            <div class="modal__carousel">
-                <div class="modal__images"></div>
-                <button type="button" class="modal__arrow modal__arrow-left">
-                    <img src="src/left.png" alt="Previous" class="modal__arrow-icon">
-                </button>
-                <button type="button" class="modal__arrow modal__arrow-right">
-                    <img src="src/right.png" alt="Next" class="modal__arrow-icon">
-                </button>
-            </div>
-            <div class="modal__counter"></div>
-        </div>
     </div>
 </body>
 </html>

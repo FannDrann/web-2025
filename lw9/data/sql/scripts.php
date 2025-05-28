@@ -72,19 +72,4 @@ function savePostToDatabase(PDO $connection, array $postParams): int
 
     return (int)$connection->lastInsertId();
 }
-
-function savePostImageToDatabase(PDO $connection, array $postParams): int
-{
-    $query = <<<SQL
-        INSERT INTO post_image (post_id, image_path)
-        VALUES (?, ?)
-        SQL;
-    $statement = $connection->prepare($query);
-    $statement->execute([
-        $postParams['post_id'],
-        $postParams['image_path']
-    ]);
-
-    return (int) $connection->lastInsertId();
-}
 ?>

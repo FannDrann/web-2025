@@ -1,4 +1,4 @@
-USE blog;
+USE blog2;
 
 INSERT INTO user (username, logo_path, description)
 VALUES
