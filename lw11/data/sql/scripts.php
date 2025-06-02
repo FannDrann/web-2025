@@ -76,14 +76,15 @@ function findAllUsersPosts(PDO $connection, int $id): array
 function savePostToDatabase(PDO $connection, array $postParams): int
 {
     $query = <<<SQL
-        INSERT INTO post (user_id, content, likes, image_path)
+        INSERT INTO post (user_id, content, likes, created_at)
         VALUES (?, ?, ?, ?)
         SQL;
     $statement = $connection->prepare($query);
     $statement->execute([
         $postParams['user_id'],
         $postParams['content'],
-        $postParams['likes']
+        $postParams['likes'],
+        $postParams['created_at']
     ]);
 
     return (int)$connection->lastInsertId();
@@ -92,15 +93,16 @@ function savePostToDatabase(PDO $connection, array $postParams): int
 function savePostImageToDatabase(PDO $connection, array $postParams): int
 {
     $query = <<<SQL
-        INSERT INTO post_images (post_id, image_path)
-        VALUES (?, ?)
+        INSERT INTO post_images (post_id, image_path, created_at)
+        VALUES (?, ?, ?)
         SQL;
     $statement = $connection->prepare($query);
     $statement->execute([
         $postParams['post_id'],
-        $postParams['image_path']
+        $postParams['image_path'],
+        $postParams['created_at']
     ]);
 
-    return (int) $connection->lastInsertId();
+    return (int)$connection->lastInsertId();
 }
 ?>

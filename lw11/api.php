@@ -40,11 +40,21 @@ if (!is_dir($imageDir)) {
 
 $imagePaths = [];
 foreach ($images as $img) {
-    $fileName = uniqid('img_', true) . '.png';
-    $savePath = $imageDir . $fileName;
-    if (!$img) {
-        echo json_encode(['error' => 'Empty URL']);
-        exit;
+    if (substr($img, -4) === '.gif') {
+        $fileName = uniqid('img_', true) . '.gif';
+        $savePath = $imageDir . $fileName;
+        if (!$img) {
+            echo json_encode(['error' => 'Empty URL']);
+            exit;
+        }
+    }
+    else {
+        $fileName = uniqid('img_', true) . '.png';
+        $savePath = $imageDir . $fileName;
+        if (!$img) {
+            echo json_encode(['error' => 'Empty URL']);
+            exit;
+        }
     }
     $headers = @get_headers($img);
     if (!$headers || substr($headers[0], 9, 3) !== '200') {
@@ -65,10 +75,21 @@ $postData = [
     'user_id' => $userId,
     'content' => $content,
     'likes' => $likes,
-    'image_path' => !empty($imagePaths) ? implode(',', $imagePaths) : ''
+    'created_at' => date('Y-m-d H:i:s')
 ];
 
 $postId = savePostToDatabase($connection, $postData);
+
+if (!empty($imagePaths)) {
+    foreach ($imagePaths as $imagePath) {
+        $imageData = [
+            'post_id' => $postId,
+            'image_path' => $imagePath,
+            'created_at' => date('Y-m-d H:i:s')
+        ];
+        savePostImageToDatabase($connection, $imageData);
+    }
+}
 
 $response = [
     'success' => true,
@@ -77,9 +98,10 @@ $response = [
         'id' => $postId,
         'user_id' => $userId,
         'content' => $content,
-        'images' => $imagePaths
+        'likes' => $likes,
+        'images' => $imagePaths,
     ]
 ];
+
 echo json_encode($response);
-exit;
 ?>

@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.post__carousel').forEach(carousel => {
+    document.querySelectorAll('.post_carousel').forEach(carousel => {
         const images = carousel.querySelectorAll('.post_photo');
-        const prevBtn = carousel.querySelector('.post__arrow-left');
-        const nextBtn = carousel.querySelector('.post__arrow-right');
-        const counter = carousel.querySelector('.post__counter');
+        const prevBtn = carousel.querySelector('.post_arrow-left');
+        const nextBtn = carousel.querySelector('.post_arrow-right');
+        const counter = carousel.querySelector('.count');
         
         if (!images.length) return;
         
@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        // Инициализация
         updateSlider();
     });
 });

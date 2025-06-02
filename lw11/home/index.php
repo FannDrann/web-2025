@@ -15,9 +15,9 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<script src="slider.js" defer></script>
 <head>
     <link rel="stylesheet" href="home.css">
+    <script src="slider.js" defer></script>
     <title>Home</title>
 </head>
 <body>
