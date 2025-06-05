@@ -23,27 +23,27 @@
     <title>Profile</title>
 </head>
 <body> 
-    <div class="navigation">
-        <a href="http://localhost:3000/lw11/home/">
+    <div class="nav">
+        <a href="http://localhost:3000/lw9 lw11/home/">
             <img src="src/Menu_Item_1.svg" alt="Home">
         </a>
-        <a href="http://localhost:3000/lw11/profile/index.php?id=1">
+        <a href="http://localhost:3000/lw9 lw11/profile/index.php?id=1">
             <img src="src/Menu_Item_2.svg" alt="Profile">
         </a>
         <img src="src/Menu_Item_3.svg" alt="Plus">
     </div>
     <div class="profile">
-        <img src=<?= $user['logo_path'] ?> alt="User" class="logo">
-        <p class="name"><?= $user['username'] ?></p>
-        <p class="description"><?= $user['description']?></p>
-        <div class="post">
-            <img src="src/post.svg" alt="posts" class="post-img">
-            <p class="post-text"><?= count($posts)?>&nbspпостов</p>
+        <img src=<?= $user['logo_path'] ?> alt="User" class="profile__logo">
+        <p class="profile__name"><?= $user['username'] ?></p>
+        <p class="profile__description"><?= $user['description']?></p>
+        <div class="profile__post">
+            <img src="src/post.svg" alt="posts" class="profile__post-img">
+            <p class="profile__post-text"><?= count($posts)?>&nbspпостов</p>
         </div>
-        <div class="userposts">
+        <div class="profile__userposts">
             <?php foreach ($posts as $post):
                 $postImages = findPostImagesInDatabase($connection, $post['id']); ?>
-                <img src=<?= $postImages[0]['image_path'] ?> alt="post" class="pic">
+                <img src=<?= $postImages[0]['image_path'] ?> alt="post" class="profile__userposts-pic">
             <?php endforeach; ?>
         </div>
     </div>

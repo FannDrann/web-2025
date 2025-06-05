@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             img.classList.toggle('modal__image_disabled', i !== currentIndex);
         });
 
-        modalCounter.textContent = `${currentIndex + 1}/${modalImages.length}`;
+        modalCounter.textContent = `${currentIndex + 1} из ${modalImages.length}`;
     }
 
     function openModal(imagesArray, startIndex) {
@@ -28,16 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         `).join('');
 
         modalImages = Array.from(modalImagesContainer.querySelectorAll('.modal__image'));
-
-        if (modalImages.length > 1) {
-            modalCounter.classList.remove('modal__arrow-disabled');
-            leftArrow.classList.remove('modal__arrow_disabled');
-            rightArrow.classList.remove('modal__arrow_disabled');
-        } else {
-            modalCounter.classList.add('modal__arrow-disabled');
-            leftArrow.classList.add('modal__arrow_disabled');
-            rightArrow.classList.add('modal__arrow_disabled');
-        }
 
         currentIndex = startIndex;
         showImage(currentIndex);

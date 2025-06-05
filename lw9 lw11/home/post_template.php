@@ -21,7 +21,7 @@ $post_images = findPostImagesInDatabase($connection, $post['id']);
             <?php endforeach; ?>
 
             <?php if (count($post_images) > 1): ?>
-                <span class="post__carousel-count">1/<?= count($post_images) ?></span>
+                <span class="post__carousel-count"><?= count($post_images) ?></span>
                 <button type="button" class="post__carousel-arrow-left">
                     <img src="src/right.svg" alt="Previous">
                 </button>

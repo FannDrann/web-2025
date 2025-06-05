@@ -18,7 +18,7 @@ body {
   margin-top: 10%;
 }
 
-.image {
+.wrapper__image {
   width: 462px;
   height: 501px;    
 }   
@@ -32,26 +32,26 @@ h1 {
   color: #222222;
 }
 
-.form {
+.wrapper__form {
   display: flex;
   flex-direction: column;
   gap: 36px;
 }
 
-.hint {
+.wrapper__form-data-hint {
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
   color: #808080;
 }
 
-.about {
+.wrapper__form-data-about {
   color: #222222;
   font-weight: 300;
   font-size: 15px;
 }
 
-.button {
+.wrapper__form-data-input {
   width: 343px;
   height: 44px;
   border-radius: 10px;
@@ -59,7 +59,7 @@ h1 {
   border: 0;
 }
 
-.submit {
+.wrapper__form-submit {
   width: 343px;
   height: 48px;
   border-radius: 10px;

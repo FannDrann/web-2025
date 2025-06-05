@@ -24,10 +24,10 @@
 </head>
 <body>
     <div class="nav">
-        <a href="http://localhost:3000/lw11/home/">
+        <a href="http://localhost:3000/lw9 lw11/home/">
             <img src="src/Menu_Item_1.svg" alt="Home">
         </a>
-        <a href="http://localhost:3000/lw11/profile/index.php?id=1">
+        <a href="http://localhost:3000/lw9 lw11/profile/index.php?id=1">
             <img src="src/Menu_Item_2.svg" alt="Profile">
         </a>        
         <img src="src/Menu_Item_3.svg" alt="Plus">
@@ -36,7 +36,7 @@
         <?php
         require_once '../data/sql/scripts.php';
         $connection = connectDatabase();
-        $posts = findAllPosts($connection); 
+        $posts = findAllPosts($connection);
         foreach ($posts as $post) {
             include 'post_template.php';
         }
@@ -44,7 +44,7 @@
     </div>
     <div class="modal modal_disabled" id="modal">
         <div class="modal-wrapper">
-            <button class="modal__close">X</button>
+            <button class="modal__close">x</button>
             <div class="modal__carousel">
                 <div class="modal__images"></div>
                 <button type="button" class="modal__arrow-left">

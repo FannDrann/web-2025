@@ -10,7 +10,7 @@ body {
   font-family: 'Golos UI';
 }
 
-.navigation {
+.nav {
   position: absolute;
   width: 45px;
   padding: 20px 5px 20px 5px;
@@ -30,7 +30,7 @@ body {
   align-items: center;
 }
 
-.logo {
+.profile__logo {
   width: 123px;
   height: 123px;
   border-radius: 16px;
@@ -38,7 +38,7 @@ body {
   margin-bottom: 15px;
 }
 
-.name {
+.profile__name {
   font-size: 32px;
   font-weight: bold;
   color: #222222;
@@ -46,7 +46,7 @@ body {
   text-align: center;
 }
 
-.description {
+.profile__description {
   font-size: 15px;
   color: #222222;
   text-align: center;
@@ -54,7 +54,7 @@ body {
   margin: 0 0 20px 0;
 }
 
-.post {
+.profile__post {
   display: flex;
   align-items: center;
   background-color: #F2F3F5;
@@ -63,26 +63,26 @@ body {
   margin-bottom: 30px;
 }
 
-.post-img {
+.profile__post-img {
   width: 16px;
   height: 16px;
   margin-right: 8px;
 }
 
-.post-text {
+.profile__post-text {
   font-size: 15px;
   color: #222222;
   margin: 0;
 }
 
-.userposts {
+.profile__userposts {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2px;
   max-width: 970px;
 }
 
-.pic {
+.profile__userposts-pic {
   width: 100%;
   height: 323px;
   object-fit: cover;
