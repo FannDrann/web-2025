@@ -95,23 +95,25 @@ function mapObject(obj, callback)
     return result;
 }
 
+
+function getRandom(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 function genPassword(num)
 {
     let result = "";
-    let specialchar = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
-    let upperchar = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'];
-    let lowerchar = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'];
-    let digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    result += (specialchar[Math.floor(Math.random() * 10)]);
-    result += (upperchar[Math.floor(Math.random() * 10)]);    
-    result += (lowerchar[Math.floor(Math.random() * 10)]);    
-    result += (digits[Math.floor(Math.random() * 10)]);
+    let specialchar = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', 
+                        'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',
+                        'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+                        0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    result += (specialchar[getRandom(1, 10)]);
+    result += (specialchar[getRandom(11, 20)]);    
+    result += (specialchar[getRandom(21, 30)]);    
+    result += (specialchar[getRandom(31, 40)]);
     
-    let Chars = specialchar.concat(upperchar, lowerchar, digits);
-    for (let i = 0; i < num-4; i++)
-    {
-        result += Chars[Math.floor(Math.random() * Chars.length)];
-    }
     return result;
 }
 

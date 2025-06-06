@@ -29,7 +29,7 @@
         </a>
         <a href="http://localhost:3000/lw9 lw11/profile/index.php?id=1">
             <img src="src/Menu_Item_2.svg" alt="Profile">
-        </a>
+        </a>        
         <img src="src/Menu_Item_3.svg" alt="Plus">
     </div>
     <div class="profile">

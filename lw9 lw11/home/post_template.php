@@ -7,7 +7,7 @@ $post_images = findPostImagesInDatabase($connection, $post['id']);
 
 <div class="post">
     <div class="post__user">
-        <a href="http://localhost:3000/lw11/profile/?id=<?= $user['id'] ?>">
+        <a href="http://localhost:3000/lw9 lw11/profile/?id=<?= $user['id'] ?>">
             <img src="<?= $user['logo_path'] ?>" alt="<?= $user['username'] ?>" class="post__user-logo">
         </a> 
         <p class="post__user-name"><?= $user['username'] ?></p>   
