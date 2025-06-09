@@ -10,7 +10,7 @@
     $user = findUserInDatabase($connection, $id);
     $posts = findAllUsersPosts($connection, $id);
     if ($id === false) {
-        header("Location: http://localhost:3000/lw11/home/");
+        header("Location: http://localhost:3000/lw9lw11/home/");
     }
 ?>
 
@@ -24,10 +24,10 @@
 </head>
 <body> 
     <div class="nav">
-        <a href="http://localhost:3000/lw9 lw11/home/">
+        <a href="http://localhost:3000/lw9lw11/home/">
             <img src="src/Menu_Item_1.svg" alt="Home">
         </a>
-        <a href="http://localhost:3000/lw9 lw11/profile/index.php?id=1">
+        <a href="http://localhost:3000/lw9lw11/profile/index.php?id=1">
             <img src="src/Menu_Item_2.svg" alt="Profile">
         </a>        
         <img src="src/Menu_Item_3.svg" alt="Plus">
