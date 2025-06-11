@@ -4,55 +4,55 @@ function isPrimeNumber(arr)
     {
         if (arr > 3)
         {
-            for (let i = 2; i <= arr-1; i++)
+            for (let i = 2; i <= Math.sqrt(arr); i++)
             {
                 if (arr % i === 0)
                 {
-                    return "не простое число"
+                    return "не простое число";
                 }
-            }    
+            }
         }
-        return "простое число"
+        return "простое число";
     }
     let result = [];
     for (let num of arr)
     {
-        if ((num > 0) && (num < 4)) 
-        {
-            result.push(`${num} простое число`);
-            continue;
-        }
-        if (num <= 0)
+        if (num < 1)
         {
             result.push(`${num} не простое число`);
             continue;
         }
+        if (num <= 3)
+        {
+            result.push(`${num} простое число`);
+            continue;
+        }
         let isPrime = true;
-        for (let i = 2; i <= num-1; i++)
+        for (let i = 2; i <= Math.sqrt(num); i++)
         {
             if (num % i === 0)
             {
                 isPrime = false;
-                break
+                break;
             }
         }
         if (isPrime) result.push(`${num} простое число`);
         else result.push(`${num} не простое число`);
     }
     return result;
-}    
+}
 
 function countVowels(str) {
-    vowels = ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я']
-    count = 0
-    for (let i of str)
-    {
-        if (vowels.includes(i))
-        {
-            count += 1
+    const vowels = ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я'];
+    let count = 0;
+    const lowerStr = str.toLowerCase();
+    Array.from(lowerStr).forEach(function(char) {
+        if (vowels.includes(char)) {
+            count += 1;
         }
-    }
-    return count
+    });
+    
+    return count;
 }
 
 
@@ -102,6 +102,14 @@ function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 function genPassword(num)
 {
     let result = "";
@@ -114,7 +122,7 @@ function genPassword(num)
     result += (specialchar[getRandom(21, 30)]);    
     result += (specialchar[getRandom(31, 40)]);
     
-    return result;
+    return shuffleArray(result);
 }
 
 

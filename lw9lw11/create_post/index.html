@@ -1,48 +1,41 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <script src="scripts.js" defer></script>
 
 <head>
     <meta charset="UTF-8">
-    <title>Создать пост</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Create post</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="nav">
-            <div class="nav__item">
-                <a href="http://localhost:3000/lw9lw11/home/" class="nav__link">
-                    <img src="src/home.png" alt="Home" class="nav__icon">
-                </a>
-            </div>
-            <div class="nav__item">
-                <a href="http://localhost:3000/lw9lw11/profile/?id=1" class="nav__link">
-                    <img src="src/profile.png" alt="Profile" class="nav__icon">
-                </a>
-            </div>
-            <div class="nav__item">
-                <a href="http://localhost:3000/lw9lw11/addpost/" class="nav__link">
-                    <img src="src/plus.png" alt="Add" class="nav__icon">
-                </a>
-            </div>
-        </div>
+    <div class="nav">
+        <a href="http://localhost:3000/lw9lw11/home/">
+            <img src="src/Menu_Item_1.svg" alt="Home">
+        </a>
+        <a href="http://localhost:3000/lw9lw11/profile/?id=1">
+            <img src="src/Menu_Item_2.svg" alt="Profile">
+        </a>
+        <a href="http://localhost:3000/lw9lw11/addpost/">
+            <img src="src/Menu_Item_3.svg" alt="Plus">
+        </a>
+    </div>
 
         <div class="add-post">
             <div class="add-post__carousel">
                 <p class="add-post__counter add-post__counter_disabled"></p>
                 <div class="add-post__images"></div>
                 <button type="button" class="add-post__arrow add-post__arrow-left add-post__arrow_disabled">
-                    <img src="src/left.png" alt="Previous" class="add-post__arrow-icon">
+                    <img src="src/right.svg" alt="Previous" class="add-post__arrow-left-icon">
                 </button>
                 <button type="button" class="add-post__arrow add-post__arrow-right add-post__arrow_disabled">
-                    <img src="src/right.png" alt="Next" class="add-post__arrow-icon">
+                    <img src="src/right.svg" alt="Next" class="add-post__arrow-right-icon">
                 </button>
-                <img src="src/image_placeholder.png" alt="Placeholder" class="add-post__image-placeholder">
+                <img src="src/placeholder.png" alt="Placeholder" class="add-post__image-placeholder">
                 <button class="btn-upload btn-upload_first">Добавить фото</button>
             </div>
             <button class="btn-upload btn-upload_second">
-                <img src="src/add_post.png" alt="Add post" class="add-post__icon btn-upload">
+                <img src="src/add.svg" alt="Add post" class="add-post__icon btn-upload">
                 <p class="btn-upload__title">Добавить фото</p>
             </button>
             <input type="file" class="file-input" accept="image/*" multiple style="display: none;">

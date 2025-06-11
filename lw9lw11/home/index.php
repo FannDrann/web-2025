@@ -29,8 +29,10 @@
         </a>
         <a href="http://localhost:3000/lw9lw11/profile/index.php?id=1">
             <img src="src/Menu_Item_2.svg" alt="Profile">
-        </a>        
-        <img src="src/Menu_Item_3.svg" alt="Plus">
+        </a>
+        <a href="http://localhost:3000/lw9lw11/create_post/">        
+            <img src="src/Menu_Item_3.svg" alt="Plus">
+        </a>
     </div>
     <div class="posts-list">
         <?php
